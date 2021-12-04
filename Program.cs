@@ -16,10 +16,14 @@ namespace AdventOfCode2021
             //WriteLine("              >-=>>+-+>   Dive!   <+-+<<=-<              ");
             //WriteLine($"+> Part 1: Final Horizontal Position * Final Depth = {Day2Part1.Run()}");
             //WriteLine($"+> Part 2: Final Horizontal Position * Final Depth = {Day2Part2.Run()}");
-            WriteLine("                 =>+-+>   Day 3   <+-+<=                 ");
-            WriteLine("        >-=>>+-+>   Binary Diagnostic   <+-+<<=-<        ");
-            WriteLine($"+> Part 1: The power consumption of the submarine is {Day3Part1.Run()}");
-            WriteLine($"+> Part 2: The life support rating of the submarine is {Day3Part2.Run()}");
+            //WriteLine("                 =>+-+>   Day 3   <+-+<=                 ");
+            //WriteLine("        >-=>>+-+>   Binary Diagnostic   <+-+<<=-<        ");
+            //WriteLine($"+> Part 1: The power consumption of the submarine is {Day3Part1.Run()}");
+            //WriteLine($"+> Part 2: The life support rating of the submarine is {Day3Part2.Run()}");
+            WriteLine("                 =>+-+>   Day 4   <+-+<=                 ");
+            WriteLine("           >-=>>+-+>   Giant Squid   <+-+<<=-<           ");
+            WriteLine($"+> Part 1: The final score of the winning board is {Day4Part1.Run()}");
+            WriteLine($"+> Part 2: The final score of the last winning board is {Day4Part2.Run()}");
         }
     }
 }
