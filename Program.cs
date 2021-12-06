@@ -24,10 +24,14 @@ namespace AdventOfCode2021
             //WriteLine("           >-=>>+-+>   Giant Squid   <+-+<<=-<           ");
             //WriteLine($"+> Part 1: The final score of the winning board is {Day4Part1.Run()}");
             //WriteLine($"+> Part 2: The final score of the last winning board is {Day4Part2.Run()}");
-            WriteLine("                 =>+-+>   Day 5   <+-+<=                 ");
-            WriteLine("      >-=>>+-+>   Hydrothermal Venture   <+-+<<=-<       ");
-            WriteLine($"+> Part 1: At least two lines overlap at {Day5Part1.Run()} points");
-            WriteLine($"+> Part 2: At least two lines overlap at {Day5Part2.Run()} points with diagonals");
+            //WriteLine("                 =>+-+>   Day 5   <+-+<=                 ");
+            //WriteLine("      >-=>>+-+>   Hydrothermal Venture   <+-+<<=-<       ");
+            //WriteLine($"+> Part 1: At least two lines overlap at {Day5Part1.Run()} points");
+            //WriteLine($"+> Part 2: At least two lines overlap at {Day5Part2.Run()} points with diagonals");
+            WriteLine("                 =>+-+>   Day 6   <+-+<=                 ");
+            WriteLine("           >-=>>+-+>   Lanternfish   <+-+<<=-<           ");
+            WriteLine($"+> Part 1: There are {Day6Part1.Run()} lanternfish after 80 days");
+            WriteLine($"+> Part 2: There are {Day6Part2.Run()} lanternfish after 256 days");
         }
     }
 }
