@@ -28,10 +28,14 @@ namespace AdventOfCode2021
             //WriteLine("      >-=>>+-+>   Hydrothermal Venture   <+-+<<=-<       ");
             //WriteLine($"+> Part 1: At least two lines overlap at {Day5Part1.Run()} points");
             //WriteLine($"+> Part 2: At least two lines overlap at {Day5Part2.Run()} points with diagonals");
-            WriteLine("                 =>+-+>   Day 6   <+-+<=                 ");
-            WriteLine("           >-=>>+-+>   Lanternfish   <+-+<<=-<           ");
-            WriteLine($"+> Part 1: There are {Day6Part1.Run()} lanternfish after 80 days");
-            WriteLine($"+> Part 2: There are {Day6Part2.Run()} lanternfish after 256 days");
+            //WriteLine("                 =>+-+>   Day 6   <+-+<=                 ");
+            //WriteLine("           >-=>>+-+>   Lanternfish   <+-+<<=-<           ");
+            //WriteLine($"+> Part 1: There are {Day6Part1.Run()} lanternfish after 80 days");
+            //WriteLine($"+> Part 2: There are {Day6Part2.Run()} lanternfish after 256 days");
+            WriteLine("                 =>+-+>   Day 7   <+-+<=                 ");
+            WriteLine("     >-=>>+-+>   The Treachery of Whales   <+-+<<=-<     ");
+            WriteLine($"+> Part 1: They must spend {Day7Part1.Run()} fuel to align to that position");
+            WriteLine($"+> Part 2: They must spend {Day7Part2.Run()} fuel to align to that position");
         }
     }
 }
