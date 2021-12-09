@@ -36,10 +36,14 @@ namespace AdventOfCode2021
             //WriteLine("     >-=>>+-+>   The Treachery of Whales   <+-+<<=-<     ");
             //WriteLine($"+> Part 1: They must spend {Day7Part1.Run()} fuel to align to that position");
             //WriteLine($"+> Part 2: They must spend {Day7Part2.Run()} fuel to align to that position");
-            WriteLine("                 =>+-+>   Day 8   <+-+<=                 ");
-            WriteLine("      >-=>>+-+>   Seven Segment Search   <+-+<<=-<       ");
-            WriteLine($"+> Part 1: In the output values, 1, 4, ,7 or 8 appear {Day8Part1.Run()} times");
-            WriteLine($"+> Part 2: The sum of all the output values is {Day8Part2.Run()}");
+            //WriteLine("                 =>+-+>   Day 8   <+-+<=                 ");
+            //WriteLine("      >-=>>+-+>   Seven Segment Search   <+-+<<=-<       ");
+            //WriteLine($"+> Part 1: In the output values, 1, 4, ,7 or 8 appear {Day8Part1.Run()} times");
+            //WriteLine($"+> Part 2: The sum of all the output values is {Day8Part2.Run()}");
+            WriteLine("                 =>+-+>   Day 9   <+-+<=                 ");
+            WriteLine("           >-=>>+-+>   Smoke Basin   <+-+<<=-<           ");
+            WriteLine($"+> Part 1: The sum of the risk levels of all low points is {Day9Part1.Run()}");
+            WriteLine($"+> Part 2: Sizes of the three largest basins multiplied together {Day8Part2.Run()}");
 
         }
     }
