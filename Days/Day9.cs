@@ -8,8 +8,8 @@ namespace AdventOfCode2021.Days
     public record LowPointCoord (int X, int Y);
     public class Basins
     {
-        public List<LowPointCoord> Coords { get; init; }
-        public int Size { get; set; }
+        public HashSet<LowPointCoord> NextCoords { get; init; }
+        public HashSet<LowPointCoord> BasinCoords { get; init; }
     }
     public static class Day9Part1
     {
@@ -45,7 +45,6 @@ namespace AdventOfCode2021.Days
             var heightMap = Array.ConvertAll(File.ReadAllLines(@"Inputs\Day9.txt"), GetMap);
             var basins = new List<Basins>();
             var isBigger = true;
-            var total = 0;
 
             for (int x = 0; x < heightMap.Length; x++)
             {
@@ -56,7 +55,7 @@ namespace AdventOfCode2021.Days
                        (x + 1 >= heightMap.Length || heightMap[x + 1][y] > heightMap[x][y]) &&
                        (y + 1 >= heightMap[x].Length || heightMap[x][y + 1] > heightMap[x][y]))
                     {
-                        basins.Add(new Basins { Coords = new List<LowPointCoord> { new LowPointCoord(x, y) }, Size = 0 });
+                        basins.Add(new Basins { NextCoords = new HashSet<LowPointCoord> { new LowPointCoord(x, y) }, BasinCoords = new HashSet<LowPointCoord> { new LowPointCoord(x, y) } });
                     }
                 }
             }
@@ -64,17 +63,48 @@ namespace AdventOfCode2021.Days
             while(isBigger)
             {
                 isBigger = false;
-                foreach(var basin in basins.Where(b => b.Coords.Any()))
+                foreach(var basin in basins.Where(b => b.NextCoords.Any()))
                 {
-                    basin.Size += basin.Coords.Count;
-                    foreach (var coord in basin.Coords)
+                    var nextLayer = new HashSet<LowPointCoord>();
+                    foreach (var coord in basin.NextCoords)
                     {
+                        if (heightMap[coord.X][coord.Y] == 8)
+                            continue;
 
+                        if(coord.X - 1 >= 0 && 9 > heightMap[coord.X - 1][coord.Y] && heightMap[coord.X - 1][coord.Y] > heightMap[coord.X][coord.Y])
+                        {
+                            nextLayer.Add(new LowPointCoord(coord.X - 1, coord.Y));
+                            isBigger = true;
+                        }
+
+                        if(coord.Y - 1 >= 0 && 9 > heightMap[coord.X][coord.Y - 1] && heightMap[coord.X][coord.Y - 1] > heightMap[coord.X][coord.Y])
+                        {
+                            nextLayer.Add(new LowPointCoord(coord.X, coord.Y - 1));
+                            isBigger = true;
+                        }
+
+                        if(coord.X + 1 < heightMap.Length && 9 > heightMap[coord.X + 1][coord.Y] && heightMap[coord.X + 1][coord.Y] > heightMap[coord.X][coord.Y])
+                        {
+                            nextLayer.Add(new LowPointCoord(coord.X + 1, coord.Y));
+                            isBigger = true;
+                        }
+
+                        if (coord.Y + 1 < heightMap[coord.X].Length && 9 > heightMap[coord.X][coord.Y + 1] && heightMap[coord.X][coord.Y + 1] > heightMap[coord.X][coord.Y])
+                        {
+                            nextLayer.Add(new LowPointCoord(coord.X, coord.Y + 1));
+                            isBigger = true;
+                        }
                     }
+
+                    basin.BasinCoords.UnionWith(basin.NextCoords);
+                    basin.NextCoords.Clear();
+                    basin.NextCoords.UnionWith(nextLayer);
                 }
             }
 
-            return total;
+            basins = basins.OrderByDescending(b => b.BasinCoords.Count).ToList();
+
+            return basins[0].BasinCoords.Count * basins[1].BasinCoords.Count * basins[2].BasinCoords.Count;
         }
 
         public static int[] GetMap(string input) => input.Select(i => int.Parse(i.ToString())).ToArray();

@@ -43,7 +43,7 @@ namespace AdventOfCode2021
             WriteLine("                 =>+-+>   Day 9   <+-+<=                 ");
             WriteLine("           >-=>>+-+>   Smoke Basin   <+-+<<=-<           ");
             WriteLine($"+> Part 1: The sum of the risk levels of all low points is {Day9Part1.Run()}");
-            WriteLine($"+> Part 2: Sizes of the three largest basins multiplied together {Day8Part2.Run()}");
+            WriteLine($"+> Part 2: Sizes of the three largest basins multiplied together {Day9Part2.Run()}");
 
         }
     }
