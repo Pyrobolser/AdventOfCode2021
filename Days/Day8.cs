@@ -122,7 +122,7 @@ namespace AdventOfCode2021.Days
 
         public static (string[] Signals, string[] Digits) GetInputs(string line)
         {
-            var values = line.Split(" | ").Select(s => s.Split(' ').Select(e => string.Concat(e.OrderBy(e => e))).ToArray()).ToArray();
+            var values = line.Split(" | ").Select(s => s.Split(' ').Select(e => string.Concat(e)).ToArray()).ToArray();
 
             return (Signals: values[0], Digits: values[1]);
         }
