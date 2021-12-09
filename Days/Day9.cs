@@ -6,11 +6,13 @@ using System.Linq;
 namespace AdventOfCode2021.Days
 {
     public record LowPointCoord (int X, int Y);
+
     public class Basins
     {
         public HashSet<LowPointCoord> NextCoords { get; init; }
         public HashSet<LowPointCoord> BasinCoords { get; init; }
     }
+
     public static class Day9Part1
     {
         public static int Run()
