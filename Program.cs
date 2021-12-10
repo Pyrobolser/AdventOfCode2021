@@ -40,11 +40,14 @@ namespace AdventOfCode2021
             //WriteLine("      >-=>>+-+>   Seven Segment Search   <+-+<<=-<       ");
             //WriteLine($"+> Part 1: In the output values, 1, 4, ,7 or 8 appear {Day8Part1.Run()} times");
             //WriteLine($"+> Part 2: The sum of all the output values is {Day8Part2.Run()}");
-            WriteLine("                 =>+-+>   Day 9   <+-+<=                 ");
-            WriteLine("           >-=>>+-+>   Smoke Basin   <+-+<<=-<           ");
-            WriteLine($"+> Part 1: The sum of the risk levels of all low points is {Day9Part1.Run()}");
-            WriteLine($"+> Part 2: Sizes of the three largest basins multiplied together {Day9Part2.Run()}");
-
+            //WriteLine("                 =>+-+>   Day 9   <+-+<=                 ");
+            //WriteLine("           >-=>>+-+>   Smoke Basin   <+-+<<=-<           ");
+            //WriteLine($"+> Part 1: The sum of the risk levels of all low points is {Day9Part1.Run()}");
+            //WriteLine($"+> Part 2: Sizes of the three largest basins multiplied together {Day9Part2.Run()}");
+            WriteLine("                 =>+-+>   Day 10  <+-+<=                 ");
+            WriteLine("         >-=>>+-+>   Syntax Scoring   <+-+<<=-<          ");
+            WriteLine($"+> Part 1: The total syntax error score for those errors is {Day10Part1.Run()}");
+            WriteLine($"+> Part 2: The middle score is {Day10Part2.Run()}");
         }
     }
 }
