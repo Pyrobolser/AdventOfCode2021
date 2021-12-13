@@ -52,10 +52,15 @@ namespace AdventOfCode2021
             //WriteLine("          >-=>>+-+>   Dumbo Octopus   <+-+<<=-<          ");
             //WriteLine($"+> Part 1: There was {Day11Part1.Run()} flashes after 100 steps");
             //WriteLine($"+> Part 2: The first step during which all octopuses flashes is {Day11Part2.Run()}");
-            WriteLine("                 =>+-+>   Day 12  <+-+<=                 ");
-            WriteLine("         >-=>>+-+>   Passage Pathing   <+-+<<=-<         ");
-            WriteLine($"+> Part 1: There are {Day12Part1.Run()} paths that visit small caves at most once");
-            WriteLine($"+> Part 2: There are {Day12Part2.Run()} paths through the cave with the new rules");
+            //WriteLine("                 =>+-+>   Day 12  <+-+<=                 ");
+            //WriteLine("         >-=>>+-+>   Passage Pathing   <+-+<<=-<         ");
+            //WriteLine($"+> Part 1: There are {Day12Part1.Run()} paths that visit small caves at most once");
+            //WriteLine($"+> Part 2: There are {Day12Part2.Run()} paths through the cave with the new rules");
+            WriteLine("                 =>+-+>   Day 13  <+-+<=                 ");
+            WriteLine("       >-=>>+-+>   Transparent Origami   <+-+<<=-<       ");
+            WriteLine($"+> Part 1: {Day13Part1.Run()} dots are visible after completing the first fold instruction");
+            WriteLine($"+> Part 2: Code to activate the infrared thermal imaging camera system");
+            Day13Part2.Run();
         }
     }
 }
