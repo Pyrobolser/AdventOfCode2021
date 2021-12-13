@@ -48,10 +48,14 @@ namespace AdventOfCode2021
             //WriteLine("         >-=>>+-+>   Syntax Scoring   <+-+<<=-<          ");
             //WriteLine($"+> Part 1: The total syntax error score for those errors is {Day10Part1.Run()}");
             //WriteLine($"+> Part 2: The middle score is {Day10Part2.Run()}");
-            WriteLine("                 =>+-+>   Day 11  <+-+<=                 ");
-            WriteLine("          >-=>>+-+>   Dumbo Octopus   <+-+<<=-<          ");
-            WriteLine($"+> Part 1: There was {Day11Part1.Run()} flashes after 100 steps");
-            WriteLine($"+> Part 2: The first step during which all octopuses flashes is {Day11Part2.Run()}");
+            //WriteLine("                 =>+-+>   Day 11  <+-+<=                 ");
+            //WriteLine("          >-=>>+-+>   Dumbo Octopus   <+-+<<=-<          ");
+            //WriteLine($"+> Part 1: There was {Day11Part1.Run()} flashes after 100 steps");
+            //WriteLine($"+> Part 2: The first step during which all octopuses flashes is {Day11Part2.Run()}");
+            WriteLine("                 =>+-+>   Day 12  <+-+<=                 ");
+            WriteLine("         >-=>>+-+>   Passage Pathing   <+-+<<=-<         ");
+            WriteLine($"+> Part 1: There are {Day12Part1.Run()} paths that visit small caves at most once");
+            WriteLine($"+> Part 2: There are {Day12Part2.Run()} paths through the cave with the new rules");
         }
     }
 }
