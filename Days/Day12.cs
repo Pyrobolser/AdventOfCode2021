@@ -69,36 +69,35 @@ namespace AdventOfCode2021.Days
             {
                 foreach (var path in paths)
                 {
-                    var next = lines.Where(p => p.Any(e => e == path.Node)
-                                          //&& (char.IsUpper(p.First(e => e != path.Node)[0]) || !path.Done.Contains(p.First(e => e != path.Node)))
-                                          ).ToList();
+                    var next = lines.Where(p => p.Any(e => e == path.Node)).ToList();
 
                     foreach (var node in next)
                     {
                         var to = node.First(e => e != path.Node);
                         if (to == "start")
-                            continue;
-
-                        if (to != "end")
                         {
-                            if (to == path.SmallCave)
-                                continue;
-
-                            if (!string.IsNullOrEmpty(path.SmallCave) && char.IsLower(to[0]) && path.Done.Any(p => p == to))
-                                continue;
-
-                            if (string.IsNullOrEmpty(path.SmallCave) && char.IsLower(to[0]) && path.Done.Count(p => p == to) == 1)
-                                path.SmallCave = to;
-
-
+                            continue;
+                        }
+                        else if (to == "end")
+                        {
+                            total++;
+                        }
+                        else if (char.IsUpper(to[0]))
+                        {
                             followUp.Add(new Path { Node = to, Done = path.Done.Append(to).ToList(), SmallCave = path.SmallCave });
                         }
                         else
                         {
-                            path.Done.Add("end");
-                            System.Console.WriteLine(string.Join(',', path.Done));
-                            total++;
+                            if (string.IsNullOrEmpty(path.SmallCave) && path.Done.Any(p => p == to))
+                            {
+                                followUp.Add(new Path { Node = to, Done = path.Done.Append(to).ToList(), SmallCave = to });
+                            }
+                            else if (!path.Done.Any(p => p == to))
+                            {
+                                followUp.Add(new Path { Node = to, Done = path.Done.Append(to).ToList(), SmallCave = path.SmallCave });
+                            }
                         }
+                        
                     }
                 }
                 paths.Clear();
