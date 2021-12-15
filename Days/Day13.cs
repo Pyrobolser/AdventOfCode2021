@@ -5,10 +5,10 @@ using System.Linq;
 
 namespace AdventOfCode2021.Days
 {
+    public record InkDot (int X, int Y);
+
     public class Day13Part1
     {
-        public record InkDot (int X, int Y);
-
         public static int Run()
         {
             var input = File.ReadAllLines(@"Inputs\Day13.txt").Where(x => !string.IsNullOrEmpty(x)).ToArray();
@@ -59,8 +59,6 @@ namespace AdventOfCode2021.Days
 
     public class Day13Part2
     {
-        public record InkDot(int X, int Y);
-
         public static void Run()
         {
             var input = File.ReadAllLines(@"Inputs\Day13.txt").Where(x => !string.IsNullOrEmpty(x)).ToArray();

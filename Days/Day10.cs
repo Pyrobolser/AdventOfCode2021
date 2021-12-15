@@ -60,7 +60,7 @@ namespace AdventOfCode2021.Days
             foreach (var line in lines)
             {
                 Stack<char> symbols = new();
-                var score = 0l;
+                var score = 0L;
                 foreach (var symbol in line)
                 {
                     if (open.Any(c => c == symbol))
