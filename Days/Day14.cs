@@ -29,7 +29,7 @@ namespace AdventOfCode2021.Days
                     sb.Append(pair[0]);
                     sb.Append(result);
                 }
-                sb.Append(polymer[polymer.Length - 1]);
+                sb.Append(polymer[^1]);
                 polymer = sb.ToString();
                 sb.Clear();
             }

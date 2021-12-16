@@ -61,11 +61,14 @@ namespace AdventOfCode2021
             //WriteLine($"+> Part 1: {Day13Part1.Run()} dots are visible after completing the first fold instruction");
             //WriteLine($"+> Part 2: Code to activate the infrared thermal imaging camera system");
             //Day13Part2.Run();
-            WriteLine("                 =>+-+>   Day 14  <+-+<=                 ");
-            WriteLine("     >-=>>+-+>   Extended Polymerization   <+-+<<=-<     ");
-            WriteLine($"+> Part 1: 10 steps> Most common element quantity - Least common element quantity = {Day14Part1.Run()}");
-            WriteLine($"+> Part 2: 40 steps> Most common element quantity - Least common element quantity = {Day14Part2.Run()}");
-
+            //WriteLine("                 =>+-+>   Day 14  <+-+<=                 ");
+            //WriteLine("     >-=>>+-+>   Extended Polymerization   <+-+<<=-<     ");
+            //WriteLine($"+> Part 1: 10 steps> Most common element quantity - Least common element quantity = {Day14Part1.Run()}");
+            //WriteLine($"+> Part 2: 40 steps> Most common element quantity - Least common element quantity = {Day14Part2.Run()}");
+            WriteLine("                 =>+-+>   Day 15  <+-+<=                 ");
+            WriteLine("              >-=>>+-+>   Chiton   <+-+<<=-<             ");
+            WriteLine($"+> Part 1: The lowest total risk of any path from top left to bottom right is {Day15Part1.Run()}");
+            WriteLine($"+> Part 2: The lowest total risk of any path from top left to bottom right of the full map is {Day15Part2.Run()}");
         }
     }
 }
